@@ -5,10 +5,10 @@
 }
 
 :root {
-    --clr-utama: #289124;
-    --clr-highlight: #180404;
-    --clr-bg-utama: #f4f7f9;
-    --clr-bg-pratinjau: #5394c2;
+    --clr-utama: #208a2e;
+    --clr-highlight: #250808;
+    --clr-bg-utama: #44a6e7;
+    --clr-bg-pratinjau: #e0f2ff;
 }
 
 body {
@@ -33,11 +33,10 @@ header h1 {
 /* Mobile-First Layout (Default: 1 Kolom) */
 main {
     padding: 1.5rem 1rem;
-    /* membuat layout default 1 kolom di mobile */
     display: flex;
     flex-direction: column;
+    /* 1 kolom di mobile */
     gap: 1.5rem;
-    /* Jarak antar form dan preview */
 }
 
 /* Styling Panel Kontrol (Form) */
@@ -67,7 +66,9 @@ label {
 }
 
 input[type="text"],
+input[type="url"],
 textarea {
+    /* Ditambah input[type="url"] */
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
@@ -87,15 +88,24 @@ textarea {
     padding: 1.2rem;
     background-color: white;
     border-radius: 6px;
-    min-height: 250px;
-    /* Minimal tinggi agar terlihat jelas */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* STYLING UNTUK GAMBAR */
+#preview-gambar {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
 #preview-judul {
-    /* Font size akan menyesuaikan antara 1.5rem (min) dan 2.5rem (max) */
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: var(--clr-highlight);
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
@@ -106,21 +116,14 @@ textarea {
     font-size: 1rem;
 }
 
-#preview-ringkasan {
-    font-size: 0.95rem;
-}
-
 
 /* Media Query & 2 Kolom dengan Grid */
-
-/* Breakpoint untuk layar lebih besar dari 768px (Desktop/Tablet) */
 @media (min-width: 768px) {
 
     main {
         padding: 2rem;
         display: grid;
         grid-template-columns: 1.5fr 2fr;
-        /* Panel Kontrol agak kecil (1.5) dari Pratinjau (2) */
         gap: 2rem;
     }
 

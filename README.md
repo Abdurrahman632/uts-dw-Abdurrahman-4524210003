@@ -8,7 +8,7 @@ Proyek ini dibuat untuk memenuhi Ujian Tengah Semester mata kuliah Desain Web de
 | :--- | :--- |
 | **Nama Lengkap** | Abdurrahman |
 | **NIM** | 4524210003 |
-| **Topik Generator** | Generator Berita Bola |
+| **Topik Generator** | Generator Cuplikan Berita Bola |
 
 ---
 

@@ -12,8 +12,7 @@
 <body>
 
     <header>
-        <h1>Live Preview Generator Berita Bola</h1>
-        <p>Alat untuk membuat pratinjau kartu berita sepak bola secara real-time.</p>
+        <h1>Generator Berita Bola</h1>
     </header>
 
     <main>
@@ -33,6 +32,12 @@
             </div>
 
             <div>
+                <label for="url-gambar">URL Gambar Utama:</label>
+                <input type="url" id="url-gambar"
+                    placeholder="Contoh: https://placehold.co/600x400/000000/FFFFFF/png?text=FOTO+BERITA">
+            </div>
+
+            <div>
                 <label for="ringkasan">Ringkasan Berita (Intro Paragraf):</label>
                 <textarea id="ringkasan" rows="4" placeholder="Tulis ringkasan hasil pertandingan terbaru"
                     required></textarea>
@@ -44,6 +49,10 @@
             <h2>Area Pratinjau</h2>
 
             <div class="card-berita">
+
+                <img id="preview-gambar" src="https://placehold.co/600x400/8c8c8c/ffffff?text=FOTO+STANDAR"
+                    alt="Gambar Pratinjau Berita">
+
                 <h3 id="preview-judul">JUDUL BERITA</h3>
 
                 <p class="detail-info" id="preview-detail">DETAIL: Tim A vs Tim B</p>

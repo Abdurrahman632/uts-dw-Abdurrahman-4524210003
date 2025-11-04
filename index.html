@@ -1,14 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Generator Cuplikan Berita Bola</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <header>
+        <h1>Live Preview Generator Berita Bola</h1>
+        <p>Alat untuk membuat pratinjau kartu berita sepak bola secara real-time.</p>
+    </header>
+
+    <main>
+
+        <form id="control-panel">
+            <h2>Panel Kontrol Data Berita</h2>
+
+            <div>
+                <label for="judul">Judul Berita:</label>
+                <input type="text" id="judul" placeholder="Contoh: Cristiano Ronaldo Amankan Kemenangan Juventus"
+                    required>
+            </div>
+
+            <div>
+                <label for="detail">Detail Utama (Tim & Skor):</label>
+                <input type="text" id="detail" placeholder="Contoh: Juventus 2 - 1 Milan" required>
+            </div>
+
+            <div>
+                <label for="ringkasan">Ringkasan Berita (Intro Paragraf):</label>
+                <textarea id="ringkasan" rows="4" placeholder="Tulis ringkasan hasil pertandingan terbaru"
+                    required></textarea>
+            </div>
+
+        </form>
+
+        <section id="preview-area">
+            <h2>Area Pratinjau</h2>
+
+            <div class="card-berita">
+                <h3 id="preview-judul">JUDUL BERITA</h3>
+
+                <p class="detail-info" id="preview-detail">DETAIL: Tim A vs Tim B</p>
+
+                <p id="preview-ringkasan">Teks ringkasan dari Panel Kontrol akan muncul di sini.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Generator Berita Bola</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
